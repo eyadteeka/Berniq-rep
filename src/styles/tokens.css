@@ -1,0 +1,97 @@
+/* ============================================================
+   BERNIQ — Design Tokens
+   مشتقة من الهوية: الأسود الدافئ للشعار الدائري، تدرّج الماجنتا
+   في رمز الطائر، الرمادي الفضي لكلمة AIRWAYS، وسحاب البانر الوردي.
+   ============================================================ */
+:root {
+  --ink-900: #140a12;
+  --ink-800: #1e0f1a;
+  --ink-700: #2b1526;
+
+  --plum-800: #3a0e30;
+  --plum-700: #4d1440;
+  --plum-600: #661a55;
+
+  --magenta-600: #b32c82;
+  --magenta-500: #c73f95;
+  --magenta-400: #d664ae;
+  --magenta-300: #e491c8;
+  --magenta-100: #f6e8f1;
+
+  --silver-600: #6f747a;
+  --silver-500: #8b9096;
+  --silver-300: #c3c7cb;
+
+  --paper: #faf7f9;
+  --surface: #ffffff;
+  --surface-sunk: #f3eef2;
+  --line: #e7dde5;
+  --line-strong: #d3c3ce;
+
+  --text: #211721;
+  --text-muted: #7a6f78;
+  --text-inverse: #ffffff;
+  --text-on-dark-muted: #cbb6c4;
+
+  --ok: #1f7a55;
+  --ok-bg: #e7f4ee;
+  --warn: #9a6205;
+  --warn-bg: #fbf1de;
+  --danger: #b32a2a;
+  --danger-bg: #fbeaea;
+  --info: #4d1440;
+  --info-bg: #f2e9f0;
+
+  --pay-cash: #b32c82;
+  --pay-check: #8b9096;
+  --pay-wps: #4d1440;
+  --pay-other: #d664ae;
+
+  --font-display: "Zain", "Tajawal", "Noto Sans Arabic", system-ui, sans-serif;
+  --font-body: "Tajawal", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.875rem;
+  --fs-2xl: 2.625rem;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 72px;
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-pill: 999px;
+
+  --sh-1: 0 1px 2px rgba(32,10,27,.06);
+  --sh-2: 0 4px 14px rgba(32,10,27,.08);
+  --sh-3: 0 14px 38px rgba(32,10,27,.14);
+  --sh-focus: 0 0 0 3px rgba(179,44,130,.28);
+
+  --ease: cubic-bezier(.2,.7,.25,1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+
+  --shell-max: 1180px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

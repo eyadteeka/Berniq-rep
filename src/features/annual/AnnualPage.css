@@ -1,0 +1,7 @@
+.b-annual__grid { max-width: 240px; margin-bottom: var(--sp-4); }
+.b-annual__list { margin: 0; padding-inline-start: 18px; }
+.b-annual__legend {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}

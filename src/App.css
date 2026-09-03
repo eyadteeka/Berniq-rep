@@ -1,0 +1,23 @@
+.b-app { display: flex; flex-direction: column; min-height: 100%; }
+
+.b-main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--shell-max);
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-5) var(--sp-8);
+  animation: b-page-in var(--dur) var(--ease);
+}
+@keyframes b-page-in { from { opacity: 0; transform: translateY(8px); } }
+
+.b-foot {
+  padding: var(--sp-5);
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--silver-500);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .b-main { padding: var(--sp-5) var(--sp-4) var(--sp-7); }
+}

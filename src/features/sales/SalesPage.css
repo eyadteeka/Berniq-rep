@@ -1,0 +1,20 @@
+.b-sales__list { margin: 0; padding-inline-start: 18px; }
+
+.b-sales__charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+@media (max-width: 860px) {
+  .b-sales__charts { grid-template-columns: 1fr; }
+}
+
+.b-sales__print { background: #fff; }
+.b-sales__printTitle { font-size: var(--fs-md); color: var(--ink-900); margin-bottom: var(--sp-3); }
+
+.b-sales__note {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}

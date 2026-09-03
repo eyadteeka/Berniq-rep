@@ -1,0 +1,78 @@
+.b-chart {
+  margin: 0;
+  padding: var(--sp-4);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+
+.b-chart__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink-800);
+  margin-bottom: var(--sp-4);
+}
+
+.b-chart__bars {
+  display: flex; align-items: flex-end; gap: 3px;
+  height: 170px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+}
+
+.b-chart__col {
+  flex: 1 0 14px;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  height: 100%;
+  position: relative;
+}
+
+.b-chart__stack {
+  width: 100%;
+  max-width: 26px;
+  display: flex; flex-direction: column-reverse;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  transition: filter var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  animation: b-grow var(--dur-slow) var(--ease) backwards;
+}
+.b-chart__col:hover .b-chart__stack { filter: brightness(1.12); transform: scaleY(1.02); transform-origin: bottom; }
+@keyframes b-grow { from { transform: scaleY(0); transform-origin: bottom; } }
+
+.b-chart__seg { display: block; min-height: 2px; }
+
+.b-chart__tick {
+  position: absolute; bottom: -18px;
+  font-size: 10px; color: var(--silver-500);
+}
+
+.b-chart__legend {
+  list-style: none; margin: var(--sp-4) 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: var(--sp-4);
+  font-size: var(--fs-xs); color: var(--text-muted);
+}
+.b-chart__legend li { display: flex; align-items: center; gap: 6px; }
+.b-chart__legend i { width: 9px; height: 9px; border-radius: 2px; transform: rotate(45deg); }
+.b-chart__legend b { color: var(--ink-800); }
+
+.b-chart--donut { display: flex; flex-direction: column; }
+.b-chart__donutWrap { display: grid; place-items: center; flex: 1; }
+.b-chart__donut { width: 100%; max-width: 210px; }
+
+.b-chart__track { fill: none; stroke: var(--surface-sunk); stroke-width: 18; }
+.b-chart__arc {
+  fill: none; stroke-width: 18; stroke-linecap: butt;
+  transform: rotate(-90deg); transform-origin: 70px 70px;
+  transition: stroke-width var(--dur-fast) var(--ease);
+}
+.b-chart__arc:hover { stroke-width: 21; }
+
+.b-chart__center {
+  text-anchor: middle; font-size: 9px; fill: var(--text-muted);
+  font-family: var(--font-body);
+}
+.b-chart__centerValue {
+  text-anchor: middle; font-size: 13px; font-weight: 700;
+  fill: var(--ink-900); font-family: var(--font-data);
+}

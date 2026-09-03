@@ -1,0 +1,31 @@
+.b-logo { display: inline-flex; align-items: center; gap: var(--sp-3); }
+
+.b-logo__mark {
+  border-radius: var(--r-pill);
+  object-fit: contain;
+  background: var(--ink-900);
+  padding: 3px;
+  box-shadow: inset 0 0 0 1px rgba(214, 100, 174, .45);
+  flex: none;
+}
+
+.b-logo__text { display: flex; flex-direction: column; line-height: 1.1; }
+
+.b-logo__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  letter-spacing: .16em;
+}
+
+.b-logo__sub {
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: .12em;
+  margin-top: 3px;
+}
+
+.b-logo--light .b-logo__name { color: var(--text-inverse); }
+.b-logo--light .b-logo__sub { color: var(--magenta-300); }
+.b-logo--dark .b-logo__name { color: var(--ink-900); }
+.b-logo--dark .b-logo__sub { color: var(--silver-500); }

@@ -1,0 +1,11 @@
+.b-ar {
+  direction: rtl;
+  text-align: inherit;
+  unicode-bidi: plaintext;
+}
+
+.b-ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}

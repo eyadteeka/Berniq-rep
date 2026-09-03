@@ -1,0 +1,111 @@
+.b-sched__errors { margin: 0; padding-inline-start: 18px; }
+
+.b-sched__ok {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: var(--fs-xs); font-weight: 700;
+  color: var(--ok); background: var(--ok-bg);
+  border: 1px solid #bfe3d2;
+  padding: 4px 10px; border-radius: var(--r-pill);
+}
+
+.b-sched__load {
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+}
+.b-sched__loadItem {
+  display: flex; align-items: baseline; gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface-sunk);
+  font-size: var(--fs-xs);
+}
+.b-sched__loadName { color: var(--text); font-weight: 600; }
+.b-sched__loadValue { color: var(--magenta-600); font-weight: 700; }
+.b-sched__loadUnit { color: var(--text-muted); }
+
+.b-sched__print {
+  background: #fff;
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+  font-family: "Tajawal", "Noto Sans Arabic", sans-serif;
+}
+
+.b-sched__printTitle {
+  font-size: var(--fs-md);
+  color: var(--ink-900);
+  margin-bottom: var(--sp-3);
+  letter-spacing: normal;
+  font-family: "Tajawal", "Noto Sans Arabic", sans-serif;
+}
+
+.b-sched__print .b-table {
+  font-family: "Tajawal", "Noto Sans Arabic", sans-serif;
+}
+
+.b-sched__print .b-table thead th {
+  letter-spacing: normal;
+  font-family: "Tajawal", "Noto Sans Arabic", sans-serif;
+  direction: rtl;
+  unicode-bidi: plaintext;
+}
+
+.b-sched__print .b-table tbody td {
+  direction: rtl;
+  unicode-bidi: plaintext;
+}
+
+/* عمود الراحة يُقرأ كاستثناء، لا كقيمة عادية */
+.b-sched__print .b-table tbody td:last-child {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.b-sched__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--sp-4);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.b-sched__logo {
+  max-width: 250px;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+@media print {
+  .b-sched__hero {
+    margin-bottom: 4px;
+    padding: 3px 0;
+    page-break-inside: avoid;
+  }
+  
+  .b-sched__logo {
+    max-width: 150px;
+    max-height: 45px;
+  }
+  
+  .b-sched__print {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .b-sched__printTitle {
+    font-size: 13px;
+    margin-bottom: 6px;
+    margin-top: 0;
+    page-break-inside: avoid;
+  }
+}
+
+.b-sched__tabs-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-4) 0;
+}
